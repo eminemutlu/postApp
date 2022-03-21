@@ -25,6 +25,11 @@ Navigate to
 ```sh
 http://localhost:4200/
 ``` 
+
+![listView](https://user-images.githubusercontent.com/9948191/159218928-49ee8f45-c55d-47bd-b23a-d8b9c8babae9.jpg)
+
+![detailView](https://user-images.githubusercontent.com/9948191/159218957-2f8d0d02-39b8-4e2c-abaa-591aaf43c86c.png)
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
