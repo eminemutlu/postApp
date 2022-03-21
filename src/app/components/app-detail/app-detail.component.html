@@ -1,0 +1,79 @@
+
+<div class="backToListBtn mt-3" (click)="back()">
+    <mat-icon >keyboard_backspace</mat-icon> 
+    <span>Back to List View</span>
+</div>
+
+<div class="container py-5">
+    <div class="row justify-content-between detailView">
+        <div class="col-lg-5 col-md-5 bg-white leftBox py-3 mb-3">
+            <div class="d-flex justify-content-between headLine">
+                <div class="d-flex align-self-center">
+                    <mat-icon>today</mat-icon>
+                    <h3>Feed Post</h3>
+                </div>
+                <button mat-raised-button color="warn">
+                    <mat-icon> place</mat-icon>
+                    alphin post
+                </button>
+            </div>
+            <div class="bigImg"><img src="../../../assets/images/caffee.jpg"></div>
+            <div class="row d-flex justify-content-between mt-3">
+                <div class="col-6 d-flex justify-content-start align-self-center">
+                    <img src="{{ appModel.user.profilePicUrl }}" width="50" height="50" class="profilePic">
+                    <div class="followers">
+                        <span><b>{{ appModel.user.username }}</b></span><br>
+                        <span>{{ appModel.user.counts.followedBy | shortNumber }}&nbsp;Followers</span>
+                    </div>
+                </div>
+                <div class="col-6 align-self-center">
+                    <p class="count-style d-flex justify-content-end">
+                        <span>
+                            <mat-icon>favorite_border</mat-icon>
+                            <span>{{ appModel.counts.likes | shortNumber }}</span>
+                        </span>
+                        <span>
+                            <mat-icon> insert_comment</mat-icon>
+                            <span>{{ appModel.counts.comments | shortNumber }}</span>
+                        </span>
+                    </p>
+                    <p class="d-flex justify-content-end postedAt">{{ appModel.postedAt | date: 'dd/MM/yy, HH:mm'}}</p>
+                </div>
+            </div>
+            <div class="mt-3 mb-5">{{ appModel.caption | shorten  }}</div>
+            <div class="previewBtn row justify-content-center"><button class="col-10" mat-button>Preview</button></div>
+        </div>
+        <div class="col-lg-6 col-md-6 boxesH">
+                <div><h1>Details View</h1></div>
+                <div class="rightBox bg-white">
+                    <form class="d-flex flex-column p-4" [formGroup]="appForm">
+                        <ng-container mPortletHeadTools>
+                            <label class="col-form-label mb-3">Add a comment</label>
+                            <mat-form-field appearance="outline">
+                              <textarea matInput 
+                                placeholder="Comment" 
+                                formControlName="caption"
+                                [(ngModel)]="textValue" 
+                                (ngModelChange)="textAreaEmpty()"
+                                rows="10"
+                                cols="40"
+                                ></textarea>
+                              <mat-error>
+                                <strong>Comment is required!</strong>
+                              </mat-error>
+                            </mat-form-field>
+                        </ng-container>
+                        <button 
+                            type="button" 
+                            mat-raised-button 
+                            color="primary" 
+                            (click)="onSubmit()" 
+                            [disabled]="!checkDataIsValid()" 
+                            matTooltip="Save">
+                            Save
+                        </button>
+                    </form>
+                </div>
+        </div>
+    </div>
+</div>

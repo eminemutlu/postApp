@@ -1,0 +1,73 @@
+
+@use './../../../assets/sass/components/components' as v;
+
+::ng-deep .backToListBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    color: v.$blue;
+    cursor: pointer;
+    .mat-icon {
+        color: v.$blue !important;
+    }
+}
+
+::ng-deep .detailView {
+    
+    .leftBox, .rightBox {
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 17px;
+        /* box-shadow */
+        -webkit-box-shadow: rgba(105,105,105,0.8) 0px 0 10px;
+        -moz-box-shadow: rgba(105,105,105,0.8) 0 0 10px;
+        box-shadow: rgba(105,105,105,0.8) 0 0 10px;
+    }
+    .leftBox {
+        .headLine button {
+            background-color: v.$flush;
+            border-radius: 20px;
+            height: 40px;
+            width: auto;
+        }
+        h3 {
+            color: v.$blue !important;
+            font-weight: bold;
+            margin-left:10px;
+        }
+        .bigImg {
+            position: relative;
+            width: 105%;
+            img{
+                width: 100%;
+                height: auto;
+                margin-left: -12px;
+            }
+        }
+    }  
+    .boxesH {
+        position: relative;
+        div:nth-child(0) {
+            height: 5em;
+        }
+        div.rightBox {
+            height: 41em;
+            form {
+                border-radius: 17px;
+                label {
+                    color: v.$blue !important;
+                }
+                button {
+                    position: absolute;
+                    bottom: 47px;
+                    right: 36px;
+                }
+            }
+        }
+        
+    } 
+    .boxesH, .leftBox {
+        height: 45em;
+    }
+}

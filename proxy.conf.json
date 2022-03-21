@@ -1,0 +1,10 @@
+[
+	{
+		"context":[
+			"/v1"
+		],
+		"target": "https://testing.fe-challenge.alphin.io",
+		"secure": false,
+		"changeOrigin": true
+	}
+]

@@ -1,0 +1,10 @@
+<div>
+	<h3 class="border-bottom">{{data.title}}</h3>
+	<p>{{ data.description}}</p>
+	<div class="d-flex justify-content-center mt-3">
+		<button mat-raised-button (click)="onNoClick()">Cancel</button>&nbsp;
+		<button mat-raised-button (click)="onYesClick()" color="primary" cdkFocusInitial>
+			Yes
+		</button>
+	</div>
+</div>

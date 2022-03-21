@@ -1,0 +1,49 @@
+
+@use './../assets/sass/components/components' as v;
+
+::ng-deep .profilePic{
+    max-width: 70px!important; 
+    border-radius: 100%;
+    width: auto;
+    margin-right: 10px;
+}
+
+::ng-deep div.followers {
+    span:first-child>b{
+        color: v.$blue;
+    }
+    span:last-child {
+        color: v.$lightTextColor;
+    }
+}
+::ng-deep .postedAt {
+    color: v.$lightTextColor;
+    position: relative;
+    bottom: 15px;
+}
+::ng-deep p.count-style {
+    justify-content: space-between;
+    span>span {
+        position: relative;
+        bottom: 7px !important; 
+        color: v.$blue !important;
+        margin-left: 3px;
+    }
+}
+::ng-deep .previewBtn {
+    button {
+        background-color: v.$white;
+        border-radius: 28px;
+        border: 3px solid v.$blue;
+        cursor:pointer;
+        color: v.$blue;
+        font-size: 17px;
+        text-decoration:none;
+        text-shadow: 0px 1px 0px v.$lightTextColor;
+        height: 50px;
+        :active {
+            position:relative;
+            top:1px;
+        }
+    }
+}

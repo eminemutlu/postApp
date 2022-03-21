@@ -1,0 +1,38 @@
+
+<div class="container py-5">
+    <div *ngIf="loading === true" class="col-12 position-absolute top-0 start-0">
+        <mat-progress-bar *ngIf="loading === true" mode="indeterminate"></mat-progress-bar>
+    </div>
+    <h1>List View</h1>
+    <ng-container *ngFor="let item of datasource; let i = index">
+        <div  class="row justify-content-between boxes mb-4 box-shadow bg-white p-4">
+            <div class="col-lg-5 col-md-9 col-sm-12 col-12  d-lg-flex justify-content-left align-self-center">
+                <img src="../../../assets/images/caffee.jpg">
+                <span>{{ item.caption | shorten }}</span>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4 col-7 d-flex justify-content-center align-self-center">
+                <img src="{{ item.user.profilePicUrl }}" width="50" height="50" class="profilePic">
+                <div class="followers">
+                    <span><b>{{ item.user.username }}</b></span><br>
+                    <span>{{ item.user.counts.followedBy | shortNumber }}&nbsp;Followers</span>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-10 col-sm-4 col-5 align-self-center">
+                <p class="count-style d-lg-flex justify-content-around">
+                    <span>
+                        <mat-icon>favorite_border</mat-icon>
+                        <span>{{ item.counts.likes | shortNumber }}</span>
+                    </span>
+                    <span>
+                        <mat-icon> insert_comment</mat-icon>
+                        <span>{{ item.counts.comments | shortNumber }}</span>
+                    </span>
+                </p>
+                <p class="text-lg-center postedAt">{{ item.postedAt | date: 'dd/MM/yy, HH:mm'}}</p>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-12 align-self-center d-flex align-items-end flex-column previewBtn">
+                <button class="float-right" mat-button (click)="goDetail(item._id)">Edit</button>
+            </div>
+        </div>
+    </ng-container>
+</div>
