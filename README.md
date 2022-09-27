@@ -26,9 +26,9 @@ Navigate to
 http://localhost:4200/
 ``` 
 
-![listView](https://user-images.githubusercontent.com/9948191/159218928-49ee8f45-c55d-47bd-b23a-d8b9c8babae9.jpg)
+![159218928-49ee8f45-c55d-47bd-b23a-d8b9c8babae9](https://user-images.githubusercontent.com/9948191/192588313-504fb918-e0d4-4553-912a-edeec43fc9a6.jpg)
 
-![detailView](https://user-images.githubusercontent.com/9948191/159218957-2f8d0d02-39b8-4e2c-abaa-591aaf43c86c.png)
+![159218957-2f8d0d02-39b8-4e2c-abaa-591aaf43c86c](https://user-images.githubusercontent.com/9948191/192588332-684843ed-8286-4a16-a334-6541dc6874b2.png)
 
 ## Code scaffolding
 
