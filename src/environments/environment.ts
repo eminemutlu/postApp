@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  APIKey: 'Vd6phDRvh6BDNbDGpzOLI1FxHorF12jK',
+  APIKey: '',
   API_BASE_URL: '',
   API_POSTING: '/v1/postings',
 };
